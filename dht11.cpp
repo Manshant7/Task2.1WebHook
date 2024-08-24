@@ -3,7 +3,7 @@
 #include <DHT.h>           // We're using the DHT library to read temperature and humidity data.
 
 #define DHTPIN 3           // We're connecting our DHT11 sensor to pin 3.
-#define DHTTYPE DHT11      // We're using the DHT11 sensor type for this project.
+#define DHTTYPE DHT11      // We're using the DHT11 sensor type for this task.
 
 DHT dht(DHTPIN, DHTTYPE);  // Here, we create a DHT object so we can interact with our sensor.
 
@@ -56,7 +56,7 @@ void loop() {
   // If we get NaN (Not a Number) values, it means something went wrong with the sensor reading.
   if (isnan(Humidity) || isnan(Temperature)) {
     Serial.println("Failed to read from DHT sensor!");
-    return;  // We exit the loop if the reading failed, no point in sending bad data.
+    return;  // We exit the loop if the reading failed.
   }
 
   //  This will print the humidity and temperature to the Serial Monitor.
