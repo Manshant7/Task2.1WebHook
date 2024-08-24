@@ -74,7 +74,7 @@ void loop() {
   int responseCode = ThingSpeak.writeFields(channelID, apiKey);
   if (responseCode == 200) {  
     Serial.println("Channel update successful.");
-  } else {  // If we get any other response, something went wrong.
+  } else {  
     Serial.print("Problem updating channel. HTTP error code ");
     Serial.println(responseCode);
   }
